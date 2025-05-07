@@ -17,6 +17,7 @@ const config: Config = {
         accent: 'var(--accent)',
         detail: 'var(--detail)',
         online: 'var(--online)',
+        'input-label': 'var(--input-label)',
       }
     },
   },

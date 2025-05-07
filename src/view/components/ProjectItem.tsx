@@ -41,7 +41,7 @@ export function ProjectItem({
       </div>
 
       <div className="flex justify-center w-full lg:w-1/2">
-        <Image src={image} alt={title} className="w-3/4" />
+        <Image src={image} alt={title} className="w-1/2" />
       </div>
     </div>
   );
