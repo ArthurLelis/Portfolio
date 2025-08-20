@@ -1,12 +1,12 @@
 'use client';
 
-import Image from 'next/image';
 import { MdArrowDownward, MdLocalPhone } from 'react-icons/md';
 
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { useActiveSection } from '@/hooks/useActiveSection';
-import MainImage from '@/assets/Main.png';
+import MainBanner from '@/assets/MainBanner.png';
 import { Button } from '@/view/components/Button';
+import { SpecialText } from '../components/SpecialText';
 import { Typewriter } from '../components/Typewriter';
 
 export function Main() {
@@ -17,46 +17,50 @@ export function Main() {
     <main
       ref={ref}
       id="main"
-      className="!pt-30 sm:!pt-40"
+      className="relative w-full px-6 pt-24 pb-14 flex overflow-hidden rounded-b-xl bg-[#1E1F29]"
     >
-      <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-0">
-        <div className="flex flex-col items-center gap-4 w-3/4 lg:items-start lg:w-1/2">
-          <div className="flex">
-            <div className="flex items-center gap-2 p-2 border-4 border-detail rounded-2xl sm:p-4">
-              <div className="w-2 h-2 bg-online rounded-full sm:w-4 sm:h-4" />
+      <div className="flex w-full">
+        <div className="relative left-1/3 -translate-x-1/2 z-10 flex flex-col items-center lg:items-start gap-4 w-2/5">
+          <h1 className="font-semibold text-white text-3xl">
+            Transformo ideias em
+          </h1>
 
-              <p className="text-sm sm:text-base"> Disponível para novos projetos </p>
-            </div>
-          </div>
-
-          <h1 className="font-semibold text-center text-xl sm:text-2xl"> Transformo ideias em </h1>
-
-          <h2 className="font-semibold text-primary text-center text-3xl sm:text-4xl">
-            <Typewriter />
-            <span className="animate-pulse">|</span>
+          <h2 className="font-semibold text-6xl">
+            <SpecialText>
+              <Typewriter />
+              <span className="animate-pulse">|</span>
+            </SpecialText>
           </h2>
 
-          <p className="text-sm text-center sm:text-base lg:text-left">
-            Olá! Sou Arthur Lelis, desenvolvedor Full Stack apaixonado por criar soluções web e mobile que unem funcionalidade, performance e design. Neste portfólio, compartilho meus projetos, experiências e desafios que impulsionam meu crescimento na área de tecnologia. Seja bem-vindo(a) ao meu espaço digital — onde cada linha de código conta uma história.
+          <p className="text-lg text-white tracking-[-0.18px] leading-[160%]">
+            Engenheiro de software fullstack apaixonado por criar soluções web e mobile
+            que unem funcionalidade, performance e design.
           </p>
 
-          <div className="flex flex-col items-center gap-2 mt-2 sm:flex-row">
-            <a href="#about"
+          <div className="flex items-center gap-2 p-1 border-2 border-white rounded-2xl sm:p-3">
+            <div className="w-2 h-2 bg-online rounded-full animate-pulse transition-all sm:w-2.5 sm:h-2.5 blur-[0.7px]" />
+
+            <p className="text-xs text-white">
+              Disponível para novos projetos
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 mt-4">
+            <a
+              href="#about"
               onClick={() => {
                 setActiveSection('about');
                 setTimeOfLastClick(Date.now());
               }}
             >
-              <Button
-                type="button"
-                className="hover:border-primary-dark"
-              >
+              <Button type="button" className="hover:border-primary-dark">
                 Ver mais sobre mim
                 <MdArrowDownward />
               </Button>
             </a>
 
-            <a href="#contact"
+            <a
+              href="#contact"
               onClick={() => {
                 setActiveSection('contact');
                 setTimeOfLastClick(Date.now());
@@ -73,8 +77,25 @@ export function Main() {
           </div>
         </div>
 
-        <Image src={MainImage} alt="ImageMain" className="w-full lg:w-1/2" />
+        <div
+          className="absolute inset-0 top-5 pointer-events-none left-2/5 rounded-2xl"
+          style={{
+            backgroundImage: `url(${MainBanner.src})`,
+            WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.71) 50%, rgba(0,0,0,1) 55%)',
+            WebkitMaskRepeat: 'no-repeat',
+            WebkitMaskSize: 'cover',
+            maskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.71) 50%, rgba(0,0,0,1) 55%)',
+            maskRepeat: 'no-repeat',
+            maskSize: 'cover',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'right center',
+            transform: 'perspective(250px) rotateX(0deg) rotateY(-5deg) scale(0.8) translate(-30%)',
+            opacity: 0.5,
+          }}
+        />
       </div>
+
     </main>
   );
 }

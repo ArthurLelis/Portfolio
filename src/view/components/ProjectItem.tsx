@@ -2,46 +2,52 @@ import Image, { StaticImageData } from 'next/image';
 
 interface ProjectItemProps {
   title: string;
-  description: string;
+  logo: StaticImageData;
   image: StaticImageData;
+  description: string;
   stacks: {
     name: string;
-    icon: React.ReactNode;
   }[];
 };
 
 export function ProjectItem({
   title,
-  description,
+  logo,
   image,
+  description,
   stacks,
 }: ProjectItemProps) {
   return (
-    <div className="flex flex-col gap-12 p-6 border-2 border-detail rounded-lg lg:flex-row lg:gap-0">
-      <div className="flex flex-col gap-4 w-full lg:w-1/2">
-        <h1 className="text-3xl text-secondary font-medium">
-          {title}
-        </h1>
+    <div
+      className="relative border-t border-[#fbfbfb1a] border-dashed py-14 rounded-[12px] overflow-hidden"
+    >
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${image.src})`,
+          WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.71) 50%, rgba(0,0,0,1) 55%)',
+          WebkitMaskRepeat: 'no-repeat',
+          WebkitMaskSize: 'cover',
+          maskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.71) 50%, rgba(0,0,0,1) 55%)',
+          maskRepeat: 'no-repeat',
+          maskSize: 'cover',
+        }}
+      />
 
-        <p className="text-sm sm:text-base"> {description} </p>
+      <div className="relative z-10 flex flex-col gap-6 max-w-2/5">
+        <div className="flex gap-4">
+          <div className="border border-[#fbfbfb0d] bg-[#111111cc] p-3 rounded-[10px] flex items-center justify-center">
+            <Image src={logo} alt={`Logo ${title}`} width={36} height={36} />
+          </div>
 
-        <div className="flex gap-6">
-          {stacks.map((stack) => (
-            <div
-              id={stack.name}
-              key={stack.name}
-              className="stack flex items-center group text-secondary text-xl transition-all"
-            >
-              <span>
-                {stack.icon}
-              </span>
-            </div>
-          ))}
+          <h1 className="text-[#fbfbfb] text-[40px] font-semibold tracking-[-1.2px] leading-[110%]">
+            {title}
+          </h1>
         </div>
-      </div>
 
-      <div className="flex justify-center w-full lg:w-1/2">
-        <Image src={image} alt={title} className="w-1/2" />
+        <p className="text-[#fbfbfbcc]">
+          {description}
+        </p>
       </div>
     </div>
   );

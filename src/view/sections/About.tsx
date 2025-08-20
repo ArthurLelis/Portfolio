@@ -1,11 +1,11 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import { MdSchool, MdLocationPin } from 'react-icons/md';
 
 import { useSectionInView } from '@/hooks/useSectionInView';
 // import { useActiveSection } from '@/hooks/useActiveSection';
-import ImagePerfil from '@/assets/Perfil.jpg';
+// import ImagePerfil from '@/assets/Perfil.jpg';
 
 export function About() {
   const { ref } = useSectionInView('about');
@@ -41,7 +41,7 @@ export function About() {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-4 w-full lg:w-1/2">
-          <Image src={ImagePerfil} alt="ImagePerfil" className="w-1/2 rounded-full" />
+          {/* <Image src={ImagePerfil} alt="ImagePerfil" className="w-1/2 rounded-full" /> */}
 
           <div className="flex flex-col items-center gap-2 text-sm sm:text-base">
             <div className="flex items-center gap-2 text-secondary">

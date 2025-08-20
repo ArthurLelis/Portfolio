@@ -1,45 +1,58 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-import { Links } from '@/data/Links';
-import { cn } from '@/utils/cn';
 import { useActiveSection } from '@/hooks/useActiveSection';
+import { links } from '@/data/links';
+import LogoAL from '@/assets/LogoAL.svg';
+import { cn } from '@/utils/cn';
+import { SpecialText } from '../components/SpecialText';
 
 export function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSection();
+  const {
+    activeSection,
+    setActiveSection,
+    setTimeOfLastClick,
+  } = useActiveSection();
 
   return (
-    <header className="relative z-40">
-      <div className="bg-white backdrop-opacity-80 fixed left-1/2 top-0 w-full -translate-x-1/2 rounded-none border border-black/3 shadow-lg blackdrop-blur-sm sm:top-4 sm:w-auto sm:rounded-full sm:p-2">
-        <nav className="py-2 sm:py-0">
-          <ul className="flex flex-1 flex-wrap items-center justify-center gap-y-1 text-sm font-medium sm:flex-nowrap sm:gap-2">
-            {Links.map((link, index) => (
-              <a
-                key={index}
-                href={link.to}
-                className={cn(
-                  'relative z-20 inline-block rounded-full px-4 py-2 transition-all hover:text-primary',
-                  activeSection === link.name && 'text-primary font-bold',
-                )}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                <span className="text-"> {link.text} </span>
+    <header className="fixed top-0 left-0 w-full z-50 bg-white backdrop-blur-md shadow-md">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-10 py-3">
+        <div className="flex items-center gap-8">
+          <a href="http://localhost:3000/">
+            <Image src={LogoAL} alt="Logo" className="h-8 w-8 rounded-sm" />
+          </a>
 
-                {activeSection === link.name && (
-                  <motion.span
-                    layoutId="activeSection"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    className="absolute inset-0 -z-10 rounded-full bg-primary/10"
-                  />
-                )}
-              </a>
-            ))}
-          </ul>
-        </nav>
+          <nav>
+            <ul className="flex items-center gap-6 text-sm font-medium">
+              {links.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.to}
+                  className={cn(
+                    "font-bold relative z-20 transition-colors duration-300",
+                    activeSection !== link.name &&
+                    "text-gray-500/50 hover:bg-gradient-to-r hover:from-[#3b82f6] hover:via-[#8b5cf6] hover:to-[#3b82f6] hover:bg-clip-text hover:text-transparent"
+                  )}
+                  onClick={() => {
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                  }}
+                >
+                  {activeSection === link.name ? (
+                    <SpecialText>{link.text}</SpecialText>
+                  ) : (
+                    <span>{link.text}</span>
+                  )}
+                </a>
+              ))}
+            </ul>
+          </nav>
+        </div>
+
+        <div className="flex items-center gap-4">
+
+        </div>
       </div>
     </header>
   );

@@ -1,6 +1,6 @@
 'use client'
 
-import type { Links } from '@/data/Links';
+import type { Links } from '@/data/links';
 import {
   createContext,
   useState,

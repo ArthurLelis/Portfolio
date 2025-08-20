@@ -1,7 +1,27 @@
-export const Links = [
-  { name: 'main', text: 'Início', to: '#main', },
-  { name: 'about', text: 'Sobre', to: '#about', },
-  { name: 'projects', text: 'Projetos', to: '#projects', },
-  { name: 'skills', text: 'Habilidades', to: '#skills', },
-  { name: 'contact', text: 'Contato', to: '#contact', },
-]
+export const links = [
+  {
+    to: '#main',
+    name: 'main',
+    text: 'Início',
+  },
+  {
+    to: '#services',
+    name: 'services',
+    text: 'Serviços',
+  },
+  {
+    to: '#projects',
+    name: 'projects',
+    text: 'Projetos',
+  },
+  {
+    to: '#about',
+    name: 'about',
+    text: 'Sobre',
+  },
+  {
+    to: '#contact',
+    name: 'contact',
+    text: 'Contato',
+  },
+];
