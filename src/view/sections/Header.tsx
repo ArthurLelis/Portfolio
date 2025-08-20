@@ -19,7 +19,7 @@ export function Header() {
     <header className="fixed top-0 left-0 w-full z-50 bg-white backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-10 py-3">
         <div className="flex items-center gap-8">
-          <a href="http://localhost:3000/">
+          <a href="https://www.arthurlelis.com.br/">
             <Image src={LogoAL} alt="Logo" className="h-8 w-8 rounded-sm" />
           </a>
 
