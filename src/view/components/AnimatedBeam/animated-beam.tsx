@@ -84,18 +84,14 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
           rectB.top - containerRect.top + rectB.height / 2 + endYOffset;
 
         const controlY = startY - curvature;
-        const d = `M ${startX},${startY} Q ${(startX + endX) / 2
-          },${controlY} ${endX},${endY}`;
+        const d = `M ${startX},${startY} Q ${(startX + endX) / 2},${controlY} ${endX},${endY}`;
         setPathD(d);
       }
     };
 
-    // Initialize ResizeObserver
-    const resizeObserver = new ResizeObserver((entries) => {
-      // For all entries, recalculate the path
-      for (const entry of entries) {
-        updatePath();
-      }
+    // Initialize ResizeObserver (sem uso de "entry")
+    const resizeObserver = new ResizeObserver(() => {
+      updatePath();
     });
 
     // Observe the container element

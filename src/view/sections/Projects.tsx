@@ -52,7 +52,7 @@ export function Projects() {
                 logo={project.logo}
                 image={project.image}
                 description={project.description}
-                stacks={project.stacks}
+              // stacks={project.stacks}
               />
             ))}
           </div>

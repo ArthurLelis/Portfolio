@@ -5,9 +5,9 @@ interface ProjectItemProps {
   logo: StaticImageData;
   image: StaticImageData;
   description: string;
-  stacks: {
-    name: string;
-  }[];
+  // stacks: {
+  //   name: string;
+  // }[];
 };
 
 export function ProjectItem({
@@ -15,7 +15,7 @@ export function ProjectItem({
   logo,
   image,
   description,
-  stacks,
+  // stacks,
 }: ProjectItemProps) {
   return (
     <div
