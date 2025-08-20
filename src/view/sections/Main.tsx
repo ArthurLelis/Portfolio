@@ -20,24 +20,25 @@ export function Main() {
       className="relative w-full px-6 pt-24 pb-14 flex overflow-hidden rounded-b-xl bg-[#1E1F29]"
     >
       <div className="flex w-full">
-        <div className="relative left-1/3 -translate-x-1/2 z-10 flex flex-col items-center lg:items-start gap-4 w-2/5">
-          <h1 className="font-semibold text-white text-3xl">
+        <div className="relative left-1/2 [@media(min-width:831px)]:left-1/3 -translate-x-1/2 z-10 flex flex-col items-center [@media(min-width:831px)]:items-start gap-4 w-full [@media(min-width:831px)]:w-3/5 xl:w-2/5">
+          <h1 className="font-semibold text-white text-2xl 2xl:text-3xl">
             Transformo ideias em
           </h1>
 
-          <h2 className="font-semibold text-6xl">
+          {/* 518px */}
+          <h2 className="font-semibold text-5xl 2xl:text-6xl">
             <SpecialText>
               <Typewriter />
               <span className="animate-pulse">|</span>
             </SpecialText>
           </h2>
 
-          <p className="text-lg text-white tracking-[-0.18px] leading-[160%]">
+          <p className="text-lg text-white tracking-[-0.18px] leading-[160%] text-center [@media(min-width:831px)]:text-left">
             Engenheiro de software fullstack apaixonado por criar soluções web e mobile
             que unem funcionalidade, performance e design.
           </p>
 
-          <div className="flex items-center gap-2 p-1 border-2 border-white rounded-2xl sm:p-3">
+          <div className="flex items-center gap-2 p-3 border-2 border-white rounded-2xl">
             <div className="w-2 h-2 bg-online rounded-full animate-pulse transition-all sm:w-2.5 sm:h-2.5 blur-[0.7px]" />
 
             <p className="text-xs text-white">
@@ -45,7 +46,7 @@ export function Main() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 mt-4">
+          <div className="flex gap-3 mt-4">
             <a
               href="#about"
               onClick={() => {
@@ -75,7 +76,7 @@ export function Main() {
         </div>
 
         <div
-          className="absolute inset-0 top-5 pointer-events-none left-2/5 rounded-2xl"
+          className="absolute inset-0 top-5 pointer-events-none left-3/5 xl:left-1/2 rounded-2xl hidden [@media(min-width:831px)]:block"
           style={{
             backgroundImage: `url(${MainBanner.src})`,
             WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.71) 50%, rgba(0,0,0,1) 55%)',

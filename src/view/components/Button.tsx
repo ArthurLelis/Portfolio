@@ -10,7 +10,7 @@ interface ButtonProps extends ComponentProps<'button'> {
 }
 
 const button = tv({
-  base: 'flex items-center justify-center gap-2 cursor-pointer p-2 h-12 rounded-xl border-2 transition-all text-sm sm:text-base disabled:cursor-not-allowed font-semibold',
+  base: 'flex items-center justify-center gap-2 cursor-pointer p-2 h-12 rounded-xl border-2 transition-all text-sm 2xl:text-base disabled:cursor-not-allowed font-semibold',
   variants: {
     variant: {
       primary:

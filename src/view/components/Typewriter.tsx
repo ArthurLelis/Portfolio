@@ -2,16 +2,15 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const words = [
-  "soluções criativas",
-  "projetos de impacto",
-  "produtos inteligentes",
-  "resultados reais",
+  'soluções criativas',
+  'projetos de impacto',
+  'resultados reais',
 ];
 
 export function Typewriter() {
   const [index, setIndex] = useState(0);
   const [typing, setTyping] = useState(true);
-  const [displayed, setDisplayed] = useState("");
+  const [displayed, setDisplayed] = useState('');
 
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout>
