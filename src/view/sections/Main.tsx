@@ -53,7 +53,7 @@ export function Main() {
                 setTimeOfLastClick(Date.now());
               }}
             >
-              <Button type="button" className="hover:border-primary-dark">
+              <Button type="button">
                 Ver mais sobre mim
                 <MdArrowDownward />
               </Button>
@@ -66,10 +66,7 @@ export function Main() {
                 setTimeOfLastClick(Date.now());
               }}
             >
-              <Button
-                type="button"
-                className="bg-white text-primary hover:bg-primary hover:text-white"
-              >
+              <Button type="button" variant="secondary">
                 Entrar em contato
                 <MdLocalPhone />
               </Button>
@@ -95,7 +92,6 @@ export function Main() {
           }}
         />
       </div>
-
     </main>
   );
 }
