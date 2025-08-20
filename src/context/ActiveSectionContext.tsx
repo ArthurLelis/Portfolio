@@ -1,6 +1,6 @@
 'use client'
 
-import type { Links } from '@/data/links';
+import type { links } from '@/data/links';
 import {
   createContext,
   useState,
@@ -9,7 +9,7 @@ import {
   type SetStateAction,
 } from 'react';
 
-export type SectionName = (typeof Links)[number]['name'];
+export type SectionName = (typeof links)[number]['name'];
 
 type ActiveSectionContextType = {
   activeSection: SectionName
