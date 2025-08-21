@@ -1,8 +1,8 @@
 'use client';
 
-import { Stacks } from '@/data/Stacks';
+// import { Stacks } from '@/data/Stacks';
 import { useSectionInView } from '@/hooks/useSectionInView';
-import { StackItem } from '@/view/components/StackItem';
+// import { StackItem } from '@/view/components/StackItem';
 
 export function Skills() {
   const { ref } = useSectionInView('skills');
@@ -25,13 +25,13 @@ export function Skills() {
         </div>
 
         <div className="grid grid-cols-5 gap-4 w-full mt-2">
-          {Stacks.map((stack) => (
+          {/* {Stacks.map((stack) => (
             <StackItem
               key={stack.name}
               name={stack.name}
               icon={stack.icon}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </section>
