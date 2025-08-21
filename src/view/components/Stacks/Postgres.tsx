@@ -25,8 +25,8 @@ export function Postgres({ isActive, className }: PostgresProps) {
       />
 
       <path
-        stroke-width="1.27917"
-        stroke-miterlimit="10"
+        strokeWidth="1.27917"
+        strokeMiterlimit="10"
         stroke={isActive ? defaultColors.primary : defaultColors.muted}
         d="M27.3762 26.948C27.5702 25.334 27.5122 25.098 28.7142 25.358L29.0202 25.386C29.9442 25.428 31.1542 25.236 31.8762 24.908C33.4062 24.198 34.3142 23.012 32.8062 23.324C29.3642 24.034 29.1142 22.868 29.1142 22.868C32.7502 17.474 34.2702 10.63 32.9562 8.95397C29.3802 4.38397 23.1882 6.54597 23.0862 6.60197L23.0522 6.60797C22.3742 6.46597 21.6242 6.38197 20.7542 6.36997C19.1962 6.34597 18.0162 6.77797 17.1182 7.45797C17.1182 7.45797 6.0742 2.90797 6.5882 13.18C6.6962 15.366 9.7182 29.728 13.3262 25.384C14.6462 23.796 15.9202 22.454 15.9202 22.454C16.5502 22.874 17.3082 23.088 18.1022 23.01L18.1642 22.958C18.1462 23.164 18.1542 23.372 18.1902 23.574C17.2622 24.614 17.5362 24.796 15.6782 25.178C13.8002 25.564 14.9042 26.254 15.6242 26.434C16.4962 26.654 18.5182 26.964 19.8862 25.052L19.8302 25.27C20.1942 25.56 20.1702 27.364 20.2242 28.652C20.2762 29.94 20.3622 31.144 20.6242 31.852C20.8882 32.56 21.1962 34.388 23.6362 33.876C25.6762 33.44 27.2362 32.81 27.3782 26.96"
       />
@@ -37,47 +37,47 @@ export function Postgres({ isActive, className }: PostgresProps) {
       />
 
       <path
-        stroke-linecap="round"
-        stroke-width="0.426192"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeWidth="0.426192"
+        strokeLinejoin="round"
         stroke={isActive ? defaultColors.primary : defaultColors.muted}
         d="M20.0322 24.3662C19.9362 27.7542 20.0562 31.1662 20.3862 31.9862C20.7182 32.8042 21.4282 34.4262 23.8702 33.9042C25.9102 33.4682 26.6522 32.6222 26.9742 30.7542L27.7282 24.7802M17.1062 7.38219C17.1062 7.38219 6.05417 2.86219 6.56817 13.1362C6.67617 15.3202 9.69817 29.6822 13.3062 25.3382C14.6222 23.7502 15.8122 22.5102 15.8122 22.5102M23.0742 6.55619C22.6942 6.67619 29.2222 4.17019 32.9342 8.91219C34.2442 10.5862 32.7262 17.4322 29.0922 22.8242"
       />
 
       <path
-        stroke-linecap="round"
-        stroke-width="0.426192"
-        stroke-linejoin="bevel"
+        strokeLinecap="round"
+        strokeWidth="0.426192"
+        strokeLinejoin="bevel"
         stroke={isActive ? defaultColors.primary : defaultColors.muted}
         d="M29.0918 22.8221C29.0918 22.8221 29.3298 23.9881 32.7818 23.2761C34.2918 22.9641 33.3818 24.1501 31.8538 24.8601C30.5998 25.4441 27.7858 25.5921 27.7378 24.7881C27.6198 22.7121 29.2198 23.3421 29.1038 22.8221C28.9998 22.3521 28.2818 21.8941 27.8118 20.7461C27.3978 19.7461 22.1438 12.0661 29.2678 13.2061C29.5298 13.1521 27.4118 6.42012 20.7438 6.32212C14.0778 6.22612 14.2878 14.5201 14.2878 14.5201"
       />
 
       <path
-        stroke-width="0.426192"
-        stroke-linejoin="round"
+        strokeWidth="0.426192"
+        strokeLinejoin="round"
         stroke={isActive ? defaultColors.primary : defaultColors.muted}
         d="M18.1663 23.5336C17.2383 24.5716 17.5123 24.7536 15.6543 25.1356C13.7763 25.5236 14.8803 26.2116 15.6003 26.3936C16.4743 26.6116 18.4943 26.9216 19.8623 25.0096C20.2783 24.4256 19.8603 23.4976 19.2883 23.2616C19.0123 23.1476 18.6423 23.0036 18.1683 23.5356L18.1663 23.5336Z"
       />
 
       <path
-        stroke-linecap="round"
-        stroke-width="0.426192"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeWidth="0.426192"
+        strokeLinejoin="round"
         stroke={isActive ? defaultColors.primary : defaultColors.muted}
         d="M18.1058 23.516C18.0118 22.906 18.3058 22.18 18.6218 21.33C19.0958 20.056 20.1878 18.782 19.3138 14.738C18.6638 11.726 14.2898 14.112 14.2898 14.52C14.2898 14.928 14.4878 16.59 14.2198 18.526C13.8658 21.052 15.8258 23.188 18.0838 22.97"
       />
 
       <path
-        stroke-miterlimit="10"
-        stroke-width="0.142262"
+        strokeMiterlimit="10"
+        strokeWidth="0.142262"
         fill={isActive ? defaultColors.primary : defaultColors.muted}
         stroke={isActive ? defaultColors.primary : defaultColors.muted}
         d="M17.0662 14.4599C17.0442 14.5979 17.3222 14.9719 17.6802 15.0219C18.0382 15.0719 18.3442 14.7819 18.3642 14.6399C18.3842 14.4999 18.1082 14.3479 17.7502 14.2979C17.3922 14.2479 17.0822 14.3219 17.0662 14.4599Z"
       />
 
       <path
-        stroke-miterlimit="10"
-        stroke-width="0.0708336"
+        strokeMiterlimit="10"
+        strokeWidth="0.0708336"
         fill={isActive ? defaultColors.primary : defaultColors.muted}
         stroke={isActive ? defaultColors.primary : defaultColors.muted}
         d="M27.9761 14.1742C27.9941 14.3122 27.7201 14.6862 27.3621 14.7362C27.0041 14.7862 26.6941 14.4962 26.6761 14.3542C26.6581 14.2142 26.9321 14.0622 27.2921 14.0122C27.6501 13.9622 27.9581 14.0362 27.9761 14.1742Z"
@@ -85,9 +85,9 @@ export function Postgres({ isActive, className }: PostgresProps) {
 
       <path
         stroke={isActive ? defaultColors.primary : defaultColors.muted}
-        stroke-linecap="round"
-        stroke-width="0.426192"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeWidth="0.426192"
+        strokeLinejoin="round"
         d="M29.2562 13.208C29.3142 14.304 29.0202 15.048 28.9822 16.212C28.9262 17.906 29.7882 19.844 28.4902 21.784"
       />
     </svg>

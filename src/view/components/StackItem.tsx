@@ -1,18 +1,34 @@
+import { useRef } from "react";
+import { AnimatePresence } from "framer-motion";
+import { Tooltip } from "./Tooltip"; // ajuste o caminho conforme sua estrutura
+
 interface StackItemProps {
-  name: string;
-  icon: React.ReactNode;
+  stack: {
+    name: string;
+    logo: React.ElementType;
+  };
+  stackActive: string;
+  setStackActive: (name: string) => void;
 }
 
-export function StackItem({ name, icon }: StackItemProps) {
-  return (
-    <div className="flex items-center gap-4 p-2 border-2 border-detail rounded-lg text-secondary">
-      <div className="p-2 bg-detail rounded-lg text-lg font-semibold">
-        {icon}
-      </div>
+export function StackItem({ stack, stackActive, setStackActive }: StackItemProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const Logo = stack.logo;
 
-      <h2 className="font-semibold">
-        {name}
-      </h2>
+  return (
+    <div
+      ref={ref}
+      onMouseLeave={() => setStackActive("")}
+      onMouseEnter={() => setStackActive(stack.name)}
+      className="group flex flex-col items-center relative"
+    >
+      <Logo isActive={stackActive === stack.name} />
+
+      <AnimatePresence>
+        {stackActive === stack.name && (
+          <Tooltip parentRef={ref}>{stack.name}</Tooltip>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

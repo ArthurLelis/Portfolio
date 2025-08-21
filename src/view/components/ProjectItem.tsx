@@ -1,5 +1,7 @@
-import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
+import Image, { StaticImageData } from 'next/image';
+
+import { StackItem } from './StackItem';
 
 interface ProjectItemProps {
   title: string;
@@ -52,29 +54,19 @@ export function ProjectItem({
         </p>
 
         <div className="">
-          <h2 className="text-xl 2xl:text-2xl font-medium text-[#fbfbfbcc] tracking-[-0.864px] leading-[40.32px]">
+          <h2 className="text-xl 2xl:text-2xl font-medium text-[#444] tracking-[-0.864px] leading-[40.32px]">
             Tecnologias usadas
           </h2>
 
           <div className="flex flex-wrap gap-5 mt-6">
-            {stacks.map((stack) => {
-              const Logo = stack.logo;
-
-              return (
-                <div
-                  key={stack.name}
-                  onMouseLeave={() => setStackActive('')}
-                  onMouseEnter={() => setStackActive(stack.name)}
-                  className="group flex flex-col items-center transition-all"
-                >
-                  <Logo isActive={stackActive === stack.name} />
-
-                  <span className="text-[#fbfbfbcc] text-sm opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 font-semibold">
-                    {stack.name}
-                  </span>
-                </div>
-              );
-            })}
+            {stacks.map((stack) => (
+              <StackItem
+                key={stack.name}
+                stack={stack}
+                stackActive={stackActive}
+                setStackActive={setStackActive}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -33,13 +33,13 @@ export function Vite({ isActive, className }: ViteProps) {
 
       <defs>
         <linearGradient id="paint0_linear_171_34" x1="9.86704" y1="9.99951" x2="28.5206" y2="38.3638" gradientUnits="userSpaceOnUse">
-          <stop stop-color={isActive ? defaultColors.primary : defaultColors.muted} />
-          <stop offset="1" stop-color={isActive ? defaultColors.secondary : defaultColors.muted} />
+          <stop stopColor={isActive ? defaultColors.primary : defaultColors.muted} />
+          <stop offset="1" stopColor={isActive ? defaultColors.secondary : defaultColors.muted} />
         </linearGradient>
 
         <linearGradient id="paint1_linear_171_34" x1="21.7515" y1="6.00098" x2="28.1733" y2="29.4744" gradientUnits="userSpaceOnUse">
-          <stop stop-color={isActive ? defaultColors.tertiary : defaultColors.muted} />
-          <stop offset="1" stop-color={isActive ? defaultColors.quaternary : defaultColors.muted} />
+          <stop stopColor={isActive ? defaultColors.tertiary : defaultColors.muted} />
+          <stop offset="1" stopColor={isActive ? defaultColors.quaternary : defaultColors.muted} />
         </linearGradient>
       </defs>
     </svg>
