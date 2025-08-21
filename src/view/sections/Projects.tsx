@@ -22,7 +22,7 @@ export function Projects() {
               Meus Projetos
             </p>
 
-            <h1 className="text-[64px] text-[#fbfbfb] font-semibold tracking-[-1.4px] leading-none text-center">
+            <h1 className="text-5xl [@media(min-width:831px)]:text-[52px] 2xl:text-[64px] text-[#fbfbfb] font-semibold tracking-[-1.4px] leading-none text-center">
               Inovação e performance em cada{" "}
               <motion.span
                 className="font-semibold"
@@ -52,7 +52,7 @@ export function Projects() {
                 logo={project.logo}
                 image={project.image}
                 description={project.description}
-              // stacks={project.stacks}
+                stacks={project.stacks}
               />
             ))}
           </div>
