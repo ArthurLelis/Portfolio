@@ -1,3 +1,5 @@
+import { useId } from 'react';
+
 import { cn } from '@/utils/cn';
 
 interface ViteProps {
@@ -14,8 +16,8 @@ export function Vite({ isActive, className }: ViteProps) {
     muted: '#444',
   };
 
-  const id1 = `id_svg_vite_${Math.random()}`;
-  const id2 = `id_svg_vite_${Math.random()}`;
+  const id1 = useId();
+  const id2 = useId();
 
   return (
     <svg

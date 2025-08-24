@@ -26,7 +26,7 @@ export function Main() {
           </h1>
 
           {/* 518px */}
-          <h2 className="font-semibold text-5xl 2xl:text-6xl">
+          <h2 className="font-semibold text-5xl 2xl:text-6xl text-center [@media(min-width:831px)]:text-left">
             <SpecialText>
               <Typewriter />
               <span className="animate-pulse">|</span>

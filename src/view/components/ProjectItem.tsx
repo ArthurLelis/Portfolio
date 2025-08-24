@@ -6,8 +6,11 @@ import { StackItem } from './StackItem';
 interface ProjectItemProps {
   title: string;
   logo: StaticImageData;
-  image: StaticImageData;
   description: string;
+  images: {
+    banner: StaticImageData;
+    thumbnail: StaticImageData;
+  };
   stacks: {
     name: string;
     logo: React.ElementType;
@@ -17,7 +20,7 @@ interface ProjectItemProps {
 export function ProjectItem({
   title,
   logo,
-  image,
+  images,
   description,
   stacks,
 }: ProjectItemProps) {
@@ -26,9 +29,9 @@ export function ProjectItem({
   return (
     <div className="relative border-t border-[#fbfbfb1a] border-dashed py-14 rounded-[12px] overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center -left-1/5 [@media(min-width:1691px)]:left-0 hidden xl:block"
         style={{
-          backgroundImage: `url(${image.src})`,
+          backgroundImage: `url(${images.banner.src})`,
           WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.71) 50%, rgba(0,0,0,1) 55%)',
           WebkitMaskRepeat: 'no-repeat',
           WebkitMaskSize: 'cover',
@@ -38,7 +41,7 @@ export function ProjectItem({
         }}
       />
 
-      <div className="relative z-10 flex flex-col gap-6 max-w-2/5">
+      <div className="relative z-10 flex flex-col gap-6 w-full xl:max-w-1/3 2xl:max-w-2/5">
         <div className="flex gap-4">
           <div className="border border-[#fbfbfb0d] bg-[#111111cc] p-3 rounded-[10px] flex items-center justify-center">
             <Image src={logo} alt={`Logo ${title}`} width={36} height={36} />
@@ -61,8 +64,8 @@ export function ProjectItem({
           <div className="flex flex-wrap gap-5 mt-6">
             {stacks.map((stack) => (
               <StackItem
-                key={stack.name}
                 stack={stack}
+                key={Math.random()}
                 stackActive={stackActive}
                 setStackActive={setStackActive}
               />
@@ -70,6 +73,8 @@ export function ProjectItem({
           </div>
         </div>
       </div>
+
+      <Image src={images.thumbnail} alt={title} className="mt-6 rounded-lg block xl:hidden" />
     </div>
   );
 }

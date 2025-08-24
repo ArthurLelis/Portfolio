@@ -50,7 +50,7 @@ export function Projects() {
                 key={project.title}
                 title={project.title}
                 logo={project.logo}
-                image={project.image}
+                images={project.images}
                 description={project.description}
                 stacks={project.stacks}
               />
