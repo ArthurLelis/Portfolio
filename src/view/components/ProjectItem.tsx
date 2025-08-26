@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 import { StackItem } from './StackItem';
+import { cn } from '@/utils/cn';
 
 interface ProjectItemProps {
   title: string;
@@ -47,12 +48,20 @@ export function ProjectItem({
             <Image src={logo} alt={`Logo ${title}`} width={36} height={36} />
           </div>
 
-          <h1 className="text-[#fbfbfb] text-[40px] font-semibold tracking-[-1.2px] leading-[110%]">
+          <h1
+            className={cn('text-[#fbfbfb] font-semibold tracking-[-1.2px] leading-[110%]',
+              'text-2xl sm:text-3xl md:text-4xl lg:text-5xl',
+            )}
+          >
             {title}
           </h1>
         </div>
 
-        <p className="text-[#fbfbfbcc]">
+        <p
+          className={cn('text-[#fbfbfbcc]',
+            'text-sm sm:text-base md:text-lg',
+          )}
+        >
           {description}
         </p>
 

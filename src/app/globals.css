@@ -1,8 +1,8 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
-@config "../../tailwind.config.ts";
+@config '../../tailwind.config.ts';
 
 :root {
   --strong: #030712;
@@ -47,6 +47,27 @@
 body {
   font-family: sans-serif;
   background-color: #030712;
+
+  main,
+  section {
+    padding: 0 5rem;
+
+    @media (max-width: 1200px) {
+      padding: 0 4rem;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 1rem;
+    }
+
+    @media (max-width: 320px) {
+      padding: 0 1rem;
+    }
+  }
 }
 
 ::-webkit-scrollbar {
