@@ -81,7 +81,7 @@ export function Header() {
             >
               <div className="flex justify-end mb-6">
                 <button onClick={() => setIsOpen(false)}>
-                  <X size={24} />
+                  <X color='#000' size={24} />
                 </button>
               </div>
 
