@@ -60,7 +60,7 @@ export function Header() {
           className="block min-[486px]:hidden p-1"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X color='#000' size={24} /> : <Menu color='#000' size={24} />}
         </button>
       </div>
 
