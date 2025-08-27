@@ -79,13 +79,17 @@ export function Header() {
               exit={{ x: -250 }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
-              <div className="flex justify-end mb-6">
+              <div className="flex justify-between border-b border-gray-200 pb-6">
+                <a href="https://www.arthurlelis.com.br/">
+                  <Image src={LogoAL} alt="Logo" className="h-8 w-8 rounded-sm" />
+                </a>
+
                 <button onClick={() => setIsOpen(false)}>
                   <X color='#000' size={24} />
                 </button>
               </div>
 
-              <nav className="flex flex-col gap-6">
+              <nav className="flex flex-col gap-6 mt-6">
                 {links.map((link, index) => (
                   <a
                     key={index}
