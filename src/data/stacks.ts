@@ -16,6 +16,14 @@ import { ReactHookForm } from '@/view/components/Stacks/ReactHookForm';
 import { Zod } from '@/view/components/Stacks/Zod';
 import { ReactQuery } from '@/view/components/Stacks/ReactQuery';
 import { Radix } from '@/view/components/Stacks/Radix';
+import { Docker } from '@/view/components/Stacks/Docker';
+import { ESLint } from '@/view/components/Stacks/ESLint';
+import { Git } from '@/view/components/Stacks/Git';
+import { JavaScript } from '@/view/components/Stacks/JavaScript';
+import { Shadcn } from '@/view/components/Stacks/Shadcn';
+import { Sql } from '@/view/components/Stacks/Sql';
+// import { Next } from '@/view/components/Stacks/Next';
+// import { Prettier } from '@/view/components/Stacks/Prettier';
 
 export const stacks = [
   { name: 'NodeJS', logo: Node },
@@ -36,5 +44,13 @@ export const stacks = [
   { name: 'Zod', logo: Zod },
   { name: 'React Query', logo: ReactQuery },
   { name: 'Radix', logo: Radix },
+  { name: 'Docker', logo: Docker },
+  { name: 'ESLint', logo: ESLint },
+  { name: 'Git', logo: Git },
+  { name: 'JavaScript', logo: JavaScript },
+  { name: 'Shadcn UI', logo: Shadcn },
+  { name: 'SQL', logo: Sql },
+  // { name: 'NextJS', logo: Next },
+  // { name: 'Prettier', logo: Prettier },
 ];
 
