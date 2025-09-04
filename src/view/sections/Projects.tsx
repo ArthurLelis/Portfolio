@@ -1,11 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { cn } from '@/utils/cn';
 import { projects } from '@/data/projects';
 import { ProjectItem } from '@/view/components/ProjectItem';
+import { SpecialText } from '../components/SpecialText';
 
 export function Projects() {
   const { ref } = useSectionInView('projects');
@@ -39,17 +38,9 @@ export function Projects() {
               )}
             >
               Inovação e performance em cada{" "}
-              <motion.span
-                className="font-semibold"
-                animate={{ color: ["#3b82f6", "#8b5cf6", "#3b82f6"] }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  repeatType: "mirror",
-                }}
-              >
+              <SpecialText>
                 linha de código
-              </motion.span>
+              </SpecialText>
             </h1>
 
             <p
@@ -57,7 +48,7 @@ export function Projects() {
                 'text-sm sm:text-base md:text-lg',
               )}
             >
-              Acredito que cada negócio tem um potencial único, e meu papel é concretizá-lo em produtos digitais eficientes e funcionais.
+              Acredito que cada projeto tem seu potencial único, e meu papel como desenvolvedor é revelar essa força através da tecnologia.
             </p>
           </div>
         </div>

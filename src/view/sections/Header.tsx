@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white backdrop-blur-md shadow-md">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+      <div className="max-w-7xl mx-auto flex items-center gap-6 px-6 py-3">
         <a
           href="https://www.arthurlelis.com.br/"
           className="hidden min-[486px]:block"

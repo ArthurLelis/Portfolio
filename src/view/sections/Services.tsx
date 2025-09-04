@@ -25,7 +25,11 @@ export function Services() {
       />
 
       <div className="py-14">
-        <div className="relative z-10 bg-white flex flex-col gap-4 items-center md:items-start w-full md:max-w-3/4 [@media(min-width:831px)]:max-w-3/5">
+        <div
+          className={cn('relative z-10 bg-white flex flex-col gap-4 items-center md:items-start w-full',
+            'md:max-w-3/4 [@media(min-width:831px)]:max-w-3/5'
+          )}
+        >
           <p className="text-xs font-medium text-[#111111cc] tracking-[1.92px] uppercase leading-[13.2px]">
             Meus Serviços
           </p>
@@ -52,7 +56,11 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div
+          className={cn('mt-14 grid gap-10',
+            'grid-cols-1 lg:grid-cols-2',
+          )}
+        >
           {services.map((service, index) => (
             <div
               key={index}
