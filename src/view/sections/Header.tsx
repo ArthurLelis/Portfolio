@@ -25,12 +25,12 @@ export function Header() {
       <div className="max-w-7xl mx-auto flex items-center gap-6 px-6 py-3">
         <a
           href="https://www.arthurlelis.com.br/"
-          className="hidden min-[486px]:block"
+          className="hidden min-[510px]:block"
         >
           <Image src={LogoAL} alt="Logo" className="h-8 w-8 rounded-sm" />
         </a>
 
-        <nav className="hidden min-[486px]:block">
+        <nav className="hidden min-[510px]:block">
           <ul className="flex items-center gap-6 text-sm font-medium">
             {links.map((link, index) => (
               <a
@@ -57,7 +57,7 @@ export function Header() {
         </nav>
 
         <button
-          className="block min-[486px]:hidden p-1"
+          className="block min-[510px]:hidden p-1"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X color='#000' size={24} /> : <Menu color='#000' size={24} />}

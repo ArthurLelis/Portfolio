@@ -22,8 +22,8 @@ import { Git } from '@/view/components/Stacks/Git';
 import { JavaScript } from '@/view/components/Stacks/JavaScript';
 import { Shadcn } from '@/view/components/Stacks/Shadcn';
 import { Sql } from '@/view/components/Stacks/Sql';
-// import { Next } from '@/view/components/Stacks/Next';
-// import { Prettier } from '@/view/components/Stacks/Prettier';
+import { Next } from '@/view/components/Stacks/Next';
+import { Prettier } from '@/view/components/Stacks/Prettier';
 
 export const stacks = [
   { name: 'NodeJS', logo: Node },
@@ -48,9 +48,9 @@ export const stacks = [
   { name: 'ESLint', logo: ESLint },
   { name: 'Git', logo: Git },
   { name: 'JavaScript', logo: JavaScript },
-  { name: 'Shadcn UI', logo: Shadcn },
+  { name: 'Shadcn', logo: Shadcn },
   { name: 'SQL', logo: Sql },
-  // { name: 'NextJS', logo: Next },
-  // { name: 'Prettier', logo: Prettier },
+  { name: 'NextJS', logo: Next },
+  { name: 'Prettier', logo: Prettier },
 ];
 
