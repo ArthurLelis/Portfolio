@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 
-import { StackItem } from './StackItem';
+import { StackItem } from '../components/StackItem';
 import { cn } from '@/utils/cn';
 
 interface ProjectItemProps {

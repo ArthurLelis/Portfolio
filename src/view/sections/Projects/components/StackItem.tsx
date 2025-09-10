@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
-import { Tooltip } from './Tooltip';
+import { Tooltip } from '@/view/components/Tooltip';
 
 interface StackItemProps {
   stack: {

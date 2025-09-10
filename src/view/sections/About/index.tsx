@@ -19,12 +19,13 @@ export function About() {
       className="!p-2 bg-[#111111]"
     >
       <div
-        className={cn('flex items-center gap-4 bg-[#fbfbfb] border-[#1111111a] rounded-3xl p-10',
+        className={cn('flex items-center gap-4 bg-[#fbfbfb] border-[#1111111a] rounded-3xl',
           'flex-col xl:flex-row',
+          'py-14',
         )}
       >
         <div
-          className={cn('flex flex-col gap-8 p-4',
+          className={cn('flex flex-col gap-8 px-4',
             'w-full xl:w-1/2',
             'items-center xl:items-start',
           )}
@@ -90,7 +91,7 @@ export function About() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-8 w-full xl:w-1/2 p-4">
+        <div className="flex flex-col items-center justify-center gap-8 w-full xl:w-1/2 px-4">
           <Image src={ImagePerfil} alt="ImagePerfil" className="w-1/3 h-1/3 rounded-full" />
 
           <div className="flex flex-wrap justify-center items-center gap-5">

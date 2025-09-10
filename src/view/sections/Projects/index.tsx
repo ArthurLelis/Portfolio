@@ -3,8 +3,8 @@
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { cn } from '@/utils/cn';
 import { projects } from '@/data/projects';
-import { ProjectItem } from '@/view/components/ProjectItem';
-import { SpecialText } from '../components/SpecialText';
+import { ProjectItem } from '@/view/sections/Projects/components/ProjectItem';
+import { SpecialText } from '@/view/components/SpecialText';
 
 export function Projects() {
   const { ref } = useSectionInView('projects');

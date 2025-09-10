@@ -7,8 +7,8 @@ import { useActiveSection } from '@/hooks/useActiveSection';
 import { cn } from '@/utils/cn';
 import MainBanner from '@/assets/MainBanner.png';
 import { Button } from '@/view/components/Button';
-import { SpecialText } from '../components/SpecialText';
-import { Typewriter } from '../components/Typewriter';
+import { SpecialText } from '../../components/SpecialText';
+import { Typewriter } from './components/Typewriter';
 
 export function Main() {
   const { ref } = useSectionInView('main', true);

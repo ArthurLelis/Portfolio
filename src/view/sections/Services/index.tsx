@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { cn } from '@/utils/cn';
 import { services } from '@/data/services';
-import { SpecialText } from '../components/SpecialText';
+import { SpecialText } from '@/view/components/SpecialText';
 
 export function Services() {
   const { ref } = useSectionInView('services');

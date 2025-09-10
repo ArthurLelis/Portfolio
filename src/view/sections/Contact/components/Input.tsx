@@ -13,31 +13,30 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const inputId = id ?? name;
 
     return (
-      <div className="relative w-1/2">
+      <div>
         <input
           ref={ref}
           {...props}
           name={name}
           id={inputId}
-          placeholder=" "
+          placeholder={placeholder}
           className={cn(
-            'w-full bg-white outline-none rounded-lg border border-gray-500 px-2 pt-4 h-[44px] text-gray-800 focus:border-gray-800 placeholder-shown:pt-0 peer',
-            error && '!border-red-900',
+            'w-full h-[48px] rounded-lg p-2 outline-none',
+            'bg-[#0f0f0f] border border-white/20 text-white',
+            'placeholder-[#fbfbfbcc]',
+            'focus:border-white',
+            error && '!border-red-400',
             className,
           )}
         />
 
-        <label
-          htmlFor={inputId}
-          className="absolute text-xs left-[8px] top-[4px] pointer-events-none text-gray-700 transition-all z-10 peer-placeholder-shown:text-base peer-placeholder-shown:top-[12px]"
-        >
-          {placeholder}
-        </label>
-
         {error && (
-          <div className="flex gap-2 items-center mt-2 text-red-900">
+          <div className="flex gap-2 items-center mt-3 text-red-500">
             <RxCrossCircled />
-            <span className="text-xs">{error}</span>
+
+            <span className="text-xs">
+              {error}
+            </span>
           </div>
         )}
       </div>
