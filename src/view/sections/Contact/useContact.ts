@@ -4,6 +4,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import emailjs from '@emailjs/browser';
 import { toast } from 'sonner';
 
+import { env } from '@/config/env';
+
 const schema = z.object({
   name: z.string().nonempty('Nome é obrigatório!'),
   email: z.email('Informe um email válido!'),
@@ -31,10 +33,10 @@ export function useContact() {
       };
 
       const response = await emailjs.send(
-        'service_0zt0nw7',
-        'contact_form',
+        env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
         templateParams,
-        '0f5VHtNf0uIDXSdgP'
+        env.NEXT_PUBLIC_EMAIL_KEY,
       );
 
       if (response.status !== 200) throw new Error();
