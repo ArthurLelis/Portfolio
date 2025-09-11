@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import { motion } from 'framer-motion';
 
 import { StackItem } from '../components/StackItem';
 import { cn } from '@/utils/cn';
@@ -42,7 +43,13 @@ export function ProjectItem({
         }}
       />
 
-      <div className="relative z-10 flex flex-col gap-6 w-full xl:max-w-1/3 2xl:max-w-2/5">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="relative z-10 flex flex-col gap-6 w-full xl:max-w-1/3 2xl:max-w-2/5"
+      >
         <div className="flex gap-4">
           <div className="border border-[#fbfbfb0d] bg-[#111111cc] p-3 rounded-[10px] flex items-center justify-center">
             <Image src={logo} alt={`Logo ${title}`} width={36} height={36} />
@@ -81,7 +88,7 @@ export function ProjectItem({
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <Image src={images.thumbnail} alt={title} className="mt-6 rounded-lg block xl:hidden" />
     </div>

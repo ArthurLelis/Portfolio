@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { motion } from 'framer-motion';
 
 import { useActiveSection } from '@/hooks/useActiveSection';
 import LogoAL from '@/assets/LogoAL.svg';
@@ -32,9 +33,15 @@ export function Footer() {
             <Image src={LogoAL} alt="Logo" className="h-8 w-8 rounded-sm" />
           </a>
 
-          <p className="text-[#fbfbfb99] text-sm text-center md:text-left">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="text-[#fbfbfb99] text-sm text-center md:text-left"
+          >
             Inovação e performance em cada linha de código.
-          </p>
+          </motion.p>
         </div>
 
         <nav>
@@ -44,7 +51,11 @@ export function Footer() {
             )}
           >
             {links.map((link, index) => (
-              <a
+              <motion.a
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
                 key={index}
                 href={link.to}
                 className={cn(
@@ -57,13 +68,17 @@ export function Footer() {
                 }}
               >
                 <span> {link.text} </span>
-              </a>
+              </motion.a>
             ))}
           </ul>
         </nav>
       </div>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.5 }}
         className={cn('flex items-center justify-between my-2 border-t-2 border-[#fbfbfb33] pt-6',
           'w-full md:w-3/4',
         )}
@@ -89,7 +104,7 @@ export function Footer() {
             <SiLinkedin />
           </a>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }

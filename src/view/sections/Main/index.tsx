@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { MdArrowDownward, MdLocalPhone } from 'react-icons/md';
 
 import { useSectionInView } from '@/hooks/useSectionInView';
@@ -24,11 +25,18 @@ export function Main() {
       )}
     >
       <div className="flex w-full">
-        <div className={cn('relative -translate-x-1/2 z-10 flex flex-col gap-4',
-          'left-1/2 [@media(min-width:831px)]:left-1/3',
-          'items-center [@media(min-width:831px)]:items-start',
-          'w-full [@media(min-width:831px)]:w-3/5 xl:w-2/5',
-        )}
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className={cn(
+            'relative -translate-x-1/2 z-10 flex flex-col gap-4',
+            'left-1/2 [@media(min-width:831px)]:left-1/3',
+            'items-center [@media(min-width:831px)]:items-start',
+            'w-full [@media(min-width:831px)]:w-3/5 xl:w-2/5',
+          )}
         >
           <h1
             className={cn('font-semibold text-white',
@@ -99,10 +107,15 @@ export function Main() {
               </Button>
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <div
-          className={cn('absolute inset-0 top-5 pointer-events-none left-2/3 rounded-2xl',
+        <motion.div
+          initial={{ opacity: 0, scale: 0.6, rotateY: -15 }}
+          whileInView={{ opacity: 0.5, scale: 0.8, rotateY: -5 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+          className={cn(
+            'absolute inset-0 top-5 pointer-events-none left-2/3 rounded-2xl',
             'hidden [@media(min-width:831px)]:block',
           )}
           style={{
@@ -117,7 +130,6 @@ export function Main() {
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'right center',
             transform: 'perspective(250px) rotateX(0deg) rotateY(-5deg) scale(0.8) translate(-30%)',
-            opacity: 0.5,
           }}
         />
       </div>

@@ -1,5 +1,6 @@
 import { FaTrashAlt } from 'react-icons/fa';
 import { MdArrowRightAlt } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { useContact } from './useContact';
@@ -31,7 +32,11 @@ export function Contact() {
           'py-14 px-4 sm:px-14',
         )}
       >
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
           className={cn('flex flex-col items-center gap-4',
             'w-full sm:w-4/5 lg:w-3/4',
           )}
@@ -58,11 +63,15 @@ export function Contact() {
           >
             Se você tem alguma dúvida, sugestão, ou está interessado em colaborar em um projeto, sinta-se à vontade para me enviar uma mensagem. Preencha o formulário abaixo, e entrarei em contato o mais breve possível.
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <div className="flex justify-center mt-4">
-        <form
+        <motion.form
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
           onSubmit={onSubmit}
           className="w-4/5 2xl:w-3/4"
         >
@@ -119,7 +128,7 @@ export function Contact() {
               </Button>
             </div>
           </div>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

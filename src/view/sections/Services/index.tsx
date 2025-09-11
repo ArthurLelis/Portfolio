@@ -25,7 +25,11 @@ export function Services() {
       />
 
       <div className="py-14">
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
           className={cn('relative z-10 bg-white flex flex-col gap-4 items-center md:items-start w-full',
             'md:max-w-3/4 [@media(min-width:831px)]:max-w-3/5'
           )}
@@ -54,7 +58,7 @@ export function Services() {
           >
             Crio sites, apps e sistemas digitais com foco na experiência do usuário e nos resultados do seu negócio. Cada interface é pensada nos detalhes para gerar conversão e crescimento.
           </p>
-        </div>
+        </motion.div>
 
         <div
           className={cn('mt-14 grid gap-10',
@@ -62,7 +66,11 @@ export function Services() {
           )}
         >
           {services.map((service, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
               key={index}
               className={cn('rounded-lg hover:shadow-lg transition relative border-1 border-gray-300 border-l-4 border-l-[#3b82f6] bg-white',
                 'p-3 xl:p-6',
@@ -98,7 +106,7 @@ export function Services() {
               >
                 {service.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

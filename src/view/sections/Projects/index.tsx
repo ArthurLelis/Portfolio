@@ -1,5 +1,7 @@
 'use client';
 
+import { motion } from 'framer-motion';
+
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { cn } from '@/utils/cn';
 import { projects } from '@/data/projects';
@@ -18,7 +20,11 @@ export function Projects() {
       )}
     >
       <div className="bg-[#111111] rounded-3xl">
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
           className={cn('flex flex-col items-center',
             'py-14 px-4 sm:px-14',
           )}
@@ -51,7 +57,7 @@ export function Projects() {
               Acredito que cada projeto tem seu potencial único, e meu papel como desenvolvedor é revelar essa força através da tecnologia.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         <div
           className={cn('px-12 pb-14 border border-t-0 border-[#fbfbfb05] rounded-b-3xl',

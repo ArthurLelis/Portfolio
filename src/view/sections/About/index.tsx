@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { cn } from '@/utils/cn';
@@ -30,7 +31,11 @@ export function About() {
             'items-center xl:items-start',
           )}
         >
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
             className={cn('relative z-10 flex flex-col gap-4 w-2/3',
               'items-center xl:items-start',
             )}
@@ -59,48 +64,77 @@ export function About() {
             >
               Um pouco dos meus valores e visão no mundo da tecnologia.
             </p>
-          </div>
+          </motion.div>
 
           <div className="space-y-4">
-            <p
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
               className={cn('text-[#111111cc] tracking-[-0.18px] leading-[160%] indent-4',
                 'text-xs sm:text-sm md:text-base',
                 'text-center xl:text-left',
               )}
             >
               Sou Arthur Lelis, desenvolvedor Full Stack Web e Mobile, apaixonado por tecnologia e pelo impacto que ela pode gerar na vida das pessoas e nos negócios. Tenho foco no ecossistema JavaScript, explorando ao máximo ferramentas e frameworks para construir soluções modernas e eficientes.
-            </p>
+            </motion.p>
 
-            <p
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
               className={cn('text-[#111111cc] tracking-[-0.18px] leading-[160%] indent-4',
                 'text-xs sm:text-sm md:text-base',
                 'text-center xl:text-left',
               )}
             >
               Acredito que cada projeto é uma oportunidade de evolução. Meus princípios estão em unir dedicação, estudo contínuo e atenção aos detalhes para entregar resultados sólidos e experiências digitais que realmente façam a diferença. Busco sempre melhorar, aprendendo novas práticas e explorando tendências que ampliam minha capacidade de gerar valor por meio da tecnologia.
-            </p>
+            </motion.p>
 
-            <p
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
               className={cn('text-[#111111cc] tracking-[-0.18px] leading-[160%] indent-4',
                 'text-xs sm:text-sm md:text-base',
                 'text-center xl:text-left',
               )}
             >
               Sempre em busca de novos desafios e oportunidades para aplicar minhas habilidades, transformando projetos ambiciosos em soluções de sucesso. Vamos nos conectar e explorar como podemos colaborar para criar inovações com impacto real!
-            </p>
+            </motion.p>
           </div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-8 w-full xl:w-1/2 px-4">
-          <Image src={ImagePerfil} alt="ImagePerfil" className="w-1/3 h-1/3 rounded-full" />
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.9 }}
+            className="flex justify-center items-center"
+          >
+            <Image src={ImagePerfil} alt="ImagePerfil" className="w-1/3 h-1/3 rounded-full" />
+          </motion.div>
 
-          <div className="flex flex-wrap justify-center items-center gap-5">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="flex flex-wrap justify-center items-center gap-5"
+          >
             {stacks.map((stack) => (
-              <StackItem key={Math.random()} stack={stack} />
+              <StackItem
+                stack={stack}
+                key={Math.random()}
+              />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
