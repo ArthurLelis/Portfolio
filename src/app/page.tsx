@@ -6,7 +6,7 @@ import { Services } from '@/view/sections/Services';
 import { Projects } from '@/view/sections/Projects';
 import { About } from '@/view/sections/About';
 import { Contact } from '@/view/sections/Contact';
-// import { Footer } from '@/view/sections/Footer';
+import { Footer } from '@/view/sections/Footer';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <Projects />
       <About />
       <Contact />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
